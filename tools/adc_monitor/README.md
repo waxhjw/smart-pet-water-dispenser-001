@@ -1,4 +1,4 @@
-# SP01 ADC 监视工具
+# 宠物智能饮水机001 ADC 监视工具
 
 ADC（Analog-to-Digital Converter，模数转换器）把采样脚电压变为数字。工具通过 DAPLink 的 SWD 读取固件 RAM 中的快照，不通过 Type-C 传输数据，也不写 GPIO 控制水泵。
 

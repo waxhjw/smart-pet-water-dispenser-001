@@ -1,4 +1,4 @@
-# SP01 固件
+# 宠物智能饮水机001 固件
 
 当前学习基线是 `SPEC_TEST007_LOW_WATER_WARNING`。从 [项目 README](../README.md)、[构建与烧录](../docs/build-and-flash.md)和 [007 功能](../docs/spec-test007.md)开始阅读。
 
