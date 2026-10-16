@@ -1,0 +1,22 @@
+{
+  "date": "2026-10-16",
+  "baseline": "bb66b63915236ea06edf1679d3ff34366d78c77a",
+  "firmware_logic_unchanged": true,
+  "publication_build_helper_changed": [
+    "tools/build-sp01-firmware.ps1"
+  ],
+  "spec_test007_hex_sha256": "019e94238f5bb7c4c6c62f6917861f37b0193bc7a7926f8ac0bb11038c797140",
+  "hex_identical_to_development_baseline": true,
+  "artifacts": {
+    "sp01_py32f002b.bin": 20492,
+    "sp01_py32f002b.elf": 422528,
+    "sp01_py32f002b.hex": 57714
+  },
+  "hardware_metadata_fields_cleared": 301,
+  "hardware_electrical_payload_preserved": true,
+  "python_syntax_checks_passed": true,
+  "license_sha256": {
+    "LICENSE": "c0ea4a896d2c8c394b29f9427589996db826cd501c512279ff0ed3ef48fabbe5",
+    "LICENSE-DOCS-HARDWARE": "9ba5360d4c96b3ad659cda305615bcd115c2a4381edfdbd80b4fa50e8ec75669"
+  }
+}

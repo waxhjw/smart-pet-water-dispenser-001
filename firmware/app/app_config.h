@@ -1,0 +1,176 @@
+#ifndef APP_CONFIG_H
+#define APP_CONFIG_H
+
+/* 基础节拍：所有软件超时先按 10ms 调度，后续可接低功耗 tick。 */
+#define SP01_TICK_MS                         10UL
+
+/* 产品时序：规格书里的感应出水 15 秒、锁定 3 分钟。 */
+#define SP01_BOOT_SETTLE_MS                 300UL
+#define SP01_SENSOR_RUN_MS                15000UL
+#define SP01_SENSOR_LOCKOUT_MS           180000UL
+#define SP01_MANUAL_RUN_MAX_MS            60000UL
+#define SP01_KEY_LONG_PRESS_MS             2000UL
+
+/* 规格书产品测试版时序。 */
+#define SP01_SPEC_BOOT_SETTLE_MS              300UL
+#define SP01_SPEC_SUPPLY_DEBOUNCE_TICKS       100U /* 1 秒稳定后才切换供电模式 */
+#define SP01_SPEC_POWER_PRESS_MS             3000UL
+#define SP01_SPEC_SENSOR_RUN_MS             15000UL
+#define SP01_SPEC_SENSOR_LOCKOUT_MS        180000UL
+#define SP01_SPEC_FUR_FLUSH_INTERVAL_MS  10800000UL
+#define SP01_SPEC_FUR_FLUSH_RUN_MS         120000UL
+/* 004/005：沿用雷达单项测试的 5 秒启动等待和 2 秒持续无人布防条件。 */
+#define SP01_SPEC_RADAR_STARTUP_WARMUP_MS    5000UL
+#define SP01_SPEC_RADAR_IDLE_ARM_MS          2000UL
+/* 005/006 低水位验证：泵启动忽略6秒，之后每秒检查一次PA3均值。 */
+#define SP01_SPEC_LOW_WATER_STARTUP_IGNORE_MS 6000UL
+#define SP01_SPEC_LOW_WATER_AVERAGE_WINDOW_MS 1000UL
+/*
+ * 005 保留旧的单窗口阈值，便于回退对比。
+ * 006 使用更保守的 600mV，并要求连续 3 个完整窗口都低于阈值。
+ * 007 将预警与停泵保护分开：585mV 是持续预警候选，420mV 是停泵保护候选。
+ */
+#if defined(SP01_SPEC_TEST007)
+#define SP01_SPEC_LOW_WATER_THRESHOLD_MV       420U
+#define SP01_SPEC_LOW_WATER_CONFIRM_COUNT       3U
+#elif defined(SP01_SPEC_TEST006)
+#define SP01_SPEC_LOW_WATER_THRESHOLD_MV       600U
+#define SP01_SPEC_LOW_WATER_CONFIRM_COUNT       3U
+#else
+#define SP01_SPEC_LOW_WATER_THRESHOLD_MV       650U
+#define SP01_SPEC_LOW_WATER_CONFIRM_COUNT       1U
+#endif
+#if defined(SP01_SPEC_TEST007)
+#define SP01_SPEC_LOW_WATER_RECOVERY_THRESHOLD_MV 625U
+#else
+#define SP01_SPEC_LOW_WATER_RECOVERY_THRESHOLD_MV 750U
+#endif
+#define SP01_SPEC_LOW_WATER_RECOVERY_CONFIRM_COUNT 2U
+#define SP01_SPEC_LOW_WATER_WARNING_THRESHOLD_MV 585U
+#define SP01_SPEC_LOW_WATER_WARNING_RECOVERY_MV  625U
+#define SP01_SPEC_LOW_WATER_WARNING_CONFIRM_COUNT 2U
+#define SP01_SPEC_LOW_WATER_WARNING_PERIOD_MS    1000UL
+#define SP01_SPEC_LOW_WATER_WARNING_ON_MS         100UL
+#define SP01_SPEC_LOW_WATER_RETRY_1_AT_MS          30000UL
+#define SP01_SPEC_LOW_WATER_RETRY_2_AT_MS         120000UL
+#define SP01_SPEC_LOW_WATER_RETRY_3_AT_MS         300000UL
+#define SP01_SPEC_LOW_WATER_RETRY_4_AT_MS         600000UL
+#define SP01_SPEC_LOW_WATER_RETRY_5_AT_MS        1200000UL
+#define SP01_SPEC_LOW_WATER_RETRY_6_AT_MS        1800000UL
+#define SP01_SPEC_LOW_WATER_RETRY_INTERVAL_MS      30000UL
+#if defined(SP01_SPEC_TEST007)
+#define SP01_SPEC_LOW_WATER_RETRY_COUNT                255U
+#define SP01_SPEC_LOW_WATER_LOCKOUT_MAX_MS    0xFFFFFFFFUL
+#else
+#define SP01_SPEC_LOW_WATER_RETRY_COUNT                 6U
+#define SP01_SPEC_LOW_WATER_LOCKOUT_MAX_MS       1800000UL
+#endif
+#define SP01_SPEC_LOW_WATER_RETRY_RUN_MS       5000UL
+#define SP01_SPEC_LOW_WATER_RETRY_IGNORE_MS    1000UL
+/* 规格要求低水位红灯闪烁；暂按 1Hz、亮灭各 500ms 验证。 */
+#define SP01_SPEC_LOW_WATER_LED_PERIOD_MS     1000UL
+#define SP01_SPEC_LOW_WATER_LED_ON_MS          500UL
+#define SP01_SPEC_CHARGE_PULSE_PERIOD_MS     1000UL
+#define SP01_SPEC_CHARGE_PULSE_ON_MS          500UL
+#define SP01_SPEC_TYPEC_BAT_NODE_MIN_MV      4300U
+#define SP01_SPEC_BATTERY_PRESENT_MIN_MV     2000U
+
+/* Type-C 整机测试模式的手势和出水参数。 */
+#define SP01_FULL_TEST_BOOT_SETTLE_MS       300UL
+#define SP01_FULL_TEST_PUMP_RUN_MS        15000UL
+#define SP01_FULL_TEST_RADAR_COOLDOWN_MS  60000UL
+#define SP01_FULL_TEST_DOUBLE_CLICK_MS     1000UL
+#define SP01_FULL_TEST_POWER_PRESS_MS      3000UL
+#define SP01_FULL_TEST_NIGHT_PRESS_MS      5000UL
+
+/* RGB 通道识别测试：每路亮 5 秒，间隔熄灭 2 秒，方便肉眼和万用表确认。 */
+#define SP01_RGB_TEST_CHANNEL_ON_MS        5000UL
+#define SP01_RGB_TEST_CHANNEL_OFF_MS       2000UL
+#define SP01_RGB_ISOLATED_PA5_LOW_MS       5000UL
+#define SP01_RGB_ISOLATED_PA5_HIGH_MS      5000UL
+#define SP01_RGB_COMBO_SCAN_STEP_MS       3000UL
+
+/* 旧白平衡测试：每档亮 5 秒、熄 1 秒；保留原有自动轮播。 */
+#define SP01_RGB_WHITE_BALANCE_ON_MS       5000UL
+#define SP01_RGB_WHITE_BALANCE_OFF_MS      1000UL
+#define SP01_RGB_WHITE_BALANCE_PWM_PERIOD_MS 10UL
+
+/* RGB PWM：100微秒一次中断、100步构成10毫秒周期，即100Hz、1%步进。 */
+#define SP01_RGB_TUNER_TIMER_TICK_HZ      10000UL
+#define SP01_RGB_TUNER_PWM_STEP_COUNT       100U
+
+/* 输入去抖：当前每个 tick 为 10ms，最终可按实测模块输出调整。 */
+#define SP01_RADAR_DEBOUNCE_TICKS             3U
+#define SP01_KEY_DEBOUNCE_TICKS               3U
+#define SP01_CHARGE_DEBOUNCE_TICKS            5U
+
+/* LOW_WATER_TEST001 / ADC旧诊断配置；SPEC_TEST005 使用上方的独立阈值。 */
+#define SP01_PUMP_START_IGNORE_MS          1000UL
+#define SP01_PUMP_DIAG_WINDOW_MS           3000UL
+#define SP01_LOW_WATER_RETRY_OFF_MS        2000UL
+#define SP01_LOW_WATER_CONFIRM_COUNT          2U
+
+/* 保持关闭，直到首板数据证明负载诊断阈值可靠。 */
+#ifndef SP01_PUMP_DIAGNOSTICS_ENABLED
+#define SP01_PUMP_DIAGNOSTICS_ENABLED          0U
+#endif
+
+/* 下列旧诊断分类阈值仅供旧测试配置使用，不能当作SPEC_TEST005的判据。 */
+#define SP01_PUMP_ADC_PRESENT_MIN_MV         40U
+#define SP01_PUMP_ADC_LOW_WATER_MIN_MV       80U
+#define SP01_PUMP_ADC_LOW_WATER_MAX_MV      135U
+#define SP01_PUMP_ADC_OVER_CURRENT_MV       260U
+
+/* 电池电压阈值。当前按单节锂电粗略值，量产前需要和电池保护板一起验证。 */
+#define SP01_BATTERY_LOW_MV                3400U
+#define SP01_BATTERY_CRITICAL_MV           3200U
+#define SP01_BATTERY_FAULT_CONFIRM_TICKS     5U
+#define SP01_BATTERY_RECOVERY_CONFIRM_TICKS  10U
+
+/* 蜂鸣器节奏门控，最终音调载波由 PB7 定时器/PWM 再确认。 */
+#define SP01_BUZZER_KEY_CLICK_MS            80UL
+#define SP01_BUZZER_RADAR_TEST_MS           250UL
+#define SP01_BUZZER_LOW_WATER_MS           180UL
+#define SP01_BUZZER_FAULT_PERIOD_MS       1000UL
+#define SP01_BUZZER_FAULT_ON_MS            200UL
+
+/* 整机测试提示音参数，均由 10ms 非阻塞节拍驱动。 */
+#define SP01_FULL_TEST_BEEP_SHORT_MS        100UL
+#define SP01_FULL_TEST_BEEP_PAUSE_MS         80UL
+#define SP01_FULL_TEST_BEEP_POWER_ON_1_MS    50UL
+#define SP01_FULL_TEST_BEEP_POWER_ON_2_MS    90UL
+#define SP01_FULL_TEST_BEEP_POWER_ON_PAUSE_MS 90UL
+#define SP01_FULL_TEST_BEEP_POWER_OFF_1_MS   50UL
+#define SP01_FULL_TEST_BEEP_POWER_OFF_2_MS  120UL
+#define SP01_FULL_TEST_BEEP_NIGHT_MS          80UL
+
+/* 规格书开关机音效占空比；其它提示音沿用板级默认 50%。 */
+#define SP01_BUZZER_DEFAULT_DUTY_PERCENT     50U
+#define SP01_POWER_ON_DUTY_1_PERCENT          38U
+#define SP01_POWER_ON_DUTY_2_PERCENT          42U
+#define SP01_POWER_ON_DUTY_3_PERCENT          48U
+#define SP01_POWER_OFF_DUTY_1_PERCENT         45U
+#define SP01_POWER_OFF_DUTY_2_PERCENT         38U
+#define SP01_POWER_OFF_DUTY_3_PERCENT         30U
+
+#define SP01_PUMP_TEST_RELEASE_ARM_MS       500UL
+#define SP01_PUMP_TEST_LONG_PRESS_MS       2000UL
+#define SP01_PUMP_TEST_RUN_MS              2000UL
+
+/* PA3/ADC_XQ 诊断版：短按后运行一轮采样，再自动停泵并报告分类。 */
+#define SP01_PUMP_ADC_TEST_TIMEOUT_MS      5000UL
+#define SP01_PUMP_ADC_TEST_REPORT_MS       1500UL
+
+/* ADC 诊断默认选择 ADC_IN1/PA3；构建脚本可改成 0(PB1) 或 3(PA6)。 */
+#ifndef SP01_PUMP_ADC_CHANNEL
+#define SP01_PUMP_ADC_CHANNEL                 1U
+#endif
+#define SP01_ADC_STABLE_DISCARD_COUNT        1U
+#define SP01_ADC_STABLE_SAMPLE_COUNT         4U
+#define SP01_ADC_AVERAGE_WINDOW             16U
+
+#if (SP01_PUMP_ADC_CHANNEL > 7U)
+#error "SP01_PUMP_ADC_CHANNEL must be an ADC channel from 0 to 7."
+#endif
+
+#endif

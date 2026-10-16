@@ -1,0 +1,310 @@
+{
+  "baseline_commit": "bb66b63915236ea06edf1679d3ff34366d78c77a",
+  "baseline_profile": "SPEC_TEST007_LOW_WATER_WARNING",
+  "files_before_publication_tooling_edits": [
+    {
+      "path": ".vscode/launch.json",
+      "sha256": "15355b303c33d274f459ac46e966dad242f06bb66b2eb2d2c1d539df0e237648"
+    },
+    {
+      "path": ".vscode/settings.json",
+      "sha256": "5ffbc47ae4589e0cbc9c34a5e3b6159747df1ea6c1daecb59ad5e642f3823dd3"
+    },
+    {
+      "path": ".vscode/tasks.json",
+      "sha256": "fc45a96408118ba7c2566e19e47ffe5db634c443595854fa6c59521a01b80070"
+    },
+    {
+      "path": "firmware/app/app_config.h",
+      "sha256": "018fe89c5e90d6ccb5748d3fa49908565a148c91ecdbdcbf3a452e8c396194ef"
+    },
+    {
+      "path": "firmware/app/app_types.h",
+      "sha256": "7925710d77a0adec1c5039388e06c257e0dedc3c5c08effaff76b6aedd61ba9c"
+    },
+    {
+      "path": "firmware/app/board_profile.h",
+      "sha256": "67c4f418889cce4afe4e4f569dd8d1326087c0d261e591d41cb46e328a25fdb1"
+    },
+    {
+      "path": "firmware/app/sp01_app.c",
+      "sha256": "7e9ad1c49c5a7fdc5957544d534667b11dfbb191d69b3fec059af8ca41a3a4c3"
+    },
+    {
+      "path": "firmware/app/sp01_app.h",
+      "sha256": "601ad89e084331e75d31fbd55868f76b7550e236ff54fe49827b6fdc2a31f3db"
+    },
+    {
+      "path": "firmware/app/sp01_battery_pump_test.c",
+      "sha256": "f6cccd523b1159dfdde392bc419de9189b465041d56998936864ed5750c57960"
+    },
+    {
+      "path": "firmware/app/sp01_battery_pump_test.h",
+      "sha256": "aef6490933daa67dd3169b6a19be7d50015ef67a0f9880dbccee7c236f035539"
+    },
+    {
+      "path": "firmware/app/sp01_battery_test.c",
+      "sha256": "f80f97432114d43d0e82af3c2718d00c14dbf44460ce6f78152dffb63c4fa106"
+    },
+    {
+      "path": "firmware/app/sp01_battery_test.h",
+      "sha256": "19c6c3a3553047da3fe84cab3771e76d39a37c245ca55354bdae4225e592032f"
+    },
+    {
+      "path": "firmware/app/sp01_build_info.h",
+      "sha256": "9296fdf2cfa1d5d04c7d0c1750afdb5b23889d60cbb84219f220c582962b9eb2"
+    },
+    {
+      "path": "firmware/app/sp01_buzzer_pattern.c",
+      "sha256": "871abc99dd1015712c53d5330416d10e05337262d06b2b36e34cb70ba47dd9d4"
+    },
+    {
+      "path": "firmware/app/sp01_buzzer_pattern.h",
+      "sha256": "03d242573df7dfe3a2f061d1fead37bdc5a8397ceff3ef73cc8f2fc280f3a105"
+    },
+    {
+      "path": "firmware/app/sp01_charge_monitor.c",
+      "sha256": "3517241dcebc249bd6bae2c12863ea27998d880325040064912ced361b00a10f"
+    },
+    {
+      "path": "firmware/app/sp01_charge_monitor.h",
+      "sha256": "14c1e6192a1c110462a4d9cc50e047c0ec0ce98ad351b9f2e55c3e61b044c2aa"
+    },
+    {
+      "path": "firmware/app/sp01_full_test.c",
+      "sha256": "26711c47480bc59749028c016dd3a73dcece9cc51fe2db599a8257568a7285e0"
+    },
+    {
+      "path": "firmware/app/sp01_full_test.h",
+      "sha256": "f26c24894cb285d5521a56553520f5876e7f7dc297ca299a80566c0a4b07a7bd"
+    },
+    {
+      "path": "firmware/app/sp01_indicator.c",
+      "sha256": "ccd81843b23388358b46c6e801705f518ec5c525ce5c252e923440252298a870"
+    },
+    {
+      "path": "firmware/app/sp01_indicator.h",
+      "sha256": "2be73613fcdc2e751c7ccf04e15d12e0d154b55073efcda97a877e466d11be9d"
+    },
+    {
+      "path": "firmware/app/sp01_power_monitor.c",
+      "sha256": "281b14955a0f877c6916c8b8ef1c888cad2ae97055071d10b560791accd71fac"
+    },
+    {
+      "path": "firmware/app/sp01_power_monitor.h",
+      "sha256": "6be5c6bfd695dad30ab09a2292862441532e1f5b8b5dc7496244970d9420df52"
+    },
+    {
+      "path": "firmware/app/sp01_pump_adc_hold_test.c",
+      "sha256": "416a094f06398c2d7d0778bdc36cc14b83dc42c84cb4591a489a2f6a004f846c"
+    },
+    {
+      "path": "firmware/app/sp01_pump_adc_hold_test.h",
+      "sha256": "856969cecc6dde5fd8cb7a125b2eff590beeae594c1ad7b5af6e8f5915c9e86b"
+    },
+    {
+      "path": "firmware/app/sp01_pump_adc_test.c",
+      "sha256": "045444d27c43640b55217a714914b4df0acf20272055969f9ef2076afc7d68e8"
+    },
+    {
+      "path": "firmware/app/sp01_pump_adc_test.h",
+      "sha256": "591a8c3a3c0d80c02ae945246f5a4ed2523cc2b62020ea1daa83d542831bb7bd"
+    },
+    {
+      "path": "firmware/app/sp01_pump_monitor.c",
+      "sha256": "af5911c634b8e9e4f1454bbee156c5931f819cfc12e545916f74bb2326e07bb9"
+    },
+    {
+      "path": "firmware/app/sp01_pump_monitor.h",
+      "sha256": "4a539ea5e4fe859f7093dbd591869d9615eba3e3c65b15be6925123b6179ed8f"
+    },
+    {
+      "path": "firmware/app/sp01_pump_test.c",
+      "sha256": "690076d92ebf1200fe2a6daee7ee4ef17d2590118064a3d80fc773e16e03560d"
+    },
+    {
+      "path": "firmware/app/sp01_pump_test.h",
+      "sha256": "829b6153eeca6aecd8572263aeccfa9e1c7b83688c2732f64d6bde26729ae53a"
+    },
+    {
+      "path": "firmware/app/sp01_radar_input.c",
+      "sha256": "c5bd14d5cc3dc466b9d1c8bc27cdddd77099d8a89d7482c2547d1edd60522209"
+    },
+    {
+      "path": "firmware/app/sp01_radar_input.h",
+      "sha256": "28dc29e68c2dde54e0d1f95814427455ee1c19ee0758007f168049fb7491459a"
+    },
+    {
+      "path": "firmware/app/sp01_rgb_test.c",
+      "sha256": "f7b14d0359cefcc36e7f659276dddcd383a42e8f64349048f9d1670caf90a3c3"
+    },
+    {
+      "path": "firmware/app/sp01_rgb_test.h",
+      "sha256": "d3bb9324dbb7230ffcb22443a2f11bd474323805bdb2d557ffb039be597bbf66"
+    },
+    {
+      "path": "firmware/app/sp01_signal_filter.c",
+      "sha256": "fbff4466bb08668f1619cf4352c66470c422a4e7cdcacf67ce36d6d80fff922a"
+    },
+    {
+      "path": "firmware/app/sp01_signal_filter.h",
+      "sha256": "ec4ef5753cd13084e016ecaaa37d7bbf0b79c5ed77dcb154b8f82ba4ec84865c"
+    },
+    {
+      "path": "firmware/app/sp01_spec_product.c",
+      "sha256": "ae144ebef47aff4e91f9c6d5743996ee37bf1a2f014a57e5f2e9223cd9dd9de2"
+    },
+    {
+      "path": "firmware/app/sp01_spec_product.h",
+      "sha256": "2b4bbdbd9f8f3ca99052729447007aecd2bd297d93095bf52ee9ec25e680f4f9"
+    },
+    {
+      "path": "firmware/app/sp01_touch_button.c",
+      "sha256": "5b0700ce48c57e5f9421527fe4beaffc48b93056780c6cd9f664049f1ca770ce"
+    },
+    {
+      "path": "firmware/app/sp01_touch_button.h",
+      "sha256": "6906db82f3dacc85ab5ac51b22bcba230a04ee00aa7e2054793332a0fe67532f"
+    },
+    {
+      "path": "firmware/app/sp01_touch_diag_test.c",
+      "sha256": "d2934f8a2e94e1bc8d41b3333a59f5497e332e660757e7e757a928c39d7f7321"
+    },
+    {
+      "path": "firmware/app/sp01_touch_diag_test.h",
+      "sha256": "472229aea168841f6dfbb5003ee9f8a2be2a4d887999680fb99ae15a79e30271"
+    },
+    {
+      "path": "firmware/main.c",
+      "sha256": "e24b3503e7559edd30e42d1434d38e0d7e6e5195415184dcd17565e458750e31"
+    },
+    {
+      "path": "firmware/platform/py32f002b/board_port.c",
+      "sha256": "2ae84ebfddc214a40a749ba7005f3421b714439004a77ed5a4babfdbe2a594e6"
+    },
+    {
+      "path": "firmware/platform/py32f002b/board_port.h",
+      "sha256": "fe5f99b61921714a86fe79f19e8da8884e4d718d798cb43142edf4b6a85c78ee"
+    },
+    {
+      "path": "firmware/platform/py32f002b/board_port_vendor.h",
+      "sha256": "77ad173af291d8946952e49993dc04fb6e8878b3807bccc1e49d823d453f8d30"
+    },
+    {
+      "path": "firmware/platform/py32f002b/py32f002b_hal_conf.h",
+      "sha256": "9d6b4895a8eb2d07671fdae19494f58b615e4f80a57c0887d32807a5082665a5"
+    },
+    {
+      "path": "firmware/platform/py32f002b/py32f002b_hal_msp.c",
+      "sha256": "c6ad1e3dbd8cd088a5e55210eecd32617e099bf03570247cdece260e868359f4"
+    },
+    {
+      "path": "firmware/platform/py32f002b/py32f002b_it.c",
+      "sha256": "305f501d9945e26661f48742c7ede1a3aae7724026e8f3c71c6e5c22311abeee"
+    },
+    {
+      "path": "firmware/platform/py32f002b/vendor_port.c",
+      "sha256": "854619cce2e465cc3cc335c16402d4a79eb106552d2f85339ea6786e8c5b9f0a"
+    },
+    {
+      "path": "firmware/platform/py32f002b/vendor_port_template.c",
+      "sha256": "b9a698c701dffb6a219a28777519c4b7c63a81276e9ca5cff087a58df11be36e"
+    },
+    {
+      "path": "firmware/target/py32f002b/Makefile",
+      "sha256": "c4228c358e06b839cd82dd914e6abbc8985d17f6445fab178cc005e37d6a84e8"
+    },
+    {
+      "path": "firmware/tests/battery_pump_test_profile_test.c",
+      "sha256": "14ef0c296fdec4991022e1f2138e21d80b8044dfdae7f04afa23cca0cc44880e"
+    },
+    {
+      "path": "firmware/tests/bench_no_pump_interlock_test.c",
+      "sha256": "961b7bc70f6e19afe86317248b0e00c630bcef205c7192ec1a063e085eed6326"
+    },
+    {
+      "path": "firmware/tests/full_test_profile_test.c",
+      "sha256": "bde47ec7a9bf4f8577d0ecf92621fc0726f56aca97c26291d07dbd912811319f"
+    },
+    {
+      "path": "firmware/tests/host_sp01_test.c",
+      "sha256": "c267e8fd9bfa7e37000a085dcfe7d2483768c754dd6bb9e75b9be8ba4cb3f665"
+    },
+    {
+      "path": "firmware/tests/pump_adc_hold_test_profile_test.c",
+      "sha256": "84243996f30dc1d091b959feed776182a58228cc4c2cd576349432888125160b"
+    },
+    {
+      "path": "firmware/tests/pump_adc_test_profile_test.c",
+      "sha256": "0086cf550b83f74710c6ad5cc0a40e4b8eb88703e61614cd55e14d97da0e4826"
+    },
+    {
+      "path": "firmware/tests/pump_monitor_uncalibrated_test.c",
+      "sha256": "c0e77463fb4d53577525175f84ebc2d37b23dea6522c9de485f215fab29f8dc2"
+    },
+    {
+      "path": "firmware/tests/pump_test_profile_test.c",
+      "sha256": "4b7669cfa2b825b4c724d1af6e1b99a902a3161aa63464bf9d6af1d9c656671b"
+    },
+    {
+      "path": "firmware/tests/rgb_all_on_test_profile_test.c",
+      "sha256": "4ec62593e708a1a41b55a197ec7ee548a86577ce93ee9fc28659087742a92c56"
+    },
+    {
+      "path": "firmware/tests/rgb_combo_pa5_pa1_test_profile_test.c",
+      "sha256": "3fa28f5e68d0c9d7d3511124fc3e585a58e54ad7a5deba3f7b566e41aff695bb"
+    },
+    {
+      "path": "firmware/tests/rgb_combo_scan_test_profile_test.c",
+      "sha256": "69ca8825d1ad08b4e6e385ad196b37d449e4ee6ca0b36ac9e1f5ae7a6ab39eac"
+    },
+    {
+      "path": "firmware/tests/rgb_isolated_pa5_test_profile_test.c",
+      "sha256": "59b12a69da8c049b4d98aef251491c1da40a845a635160a6c77865ab434b3d6a"
+    },
+    {
+      "path": "firmware/tests/rgb_isolated_pb3_test_profile_test.c",
+      "sha256": "f933917ad88847bde1791aaff10e0ec28f5a18f095c3d425492b6f27dca74f60"
+    },
+    {
+      "path": "firmware/tests/rgb_single_test_profile_test.c",
+      "sha256": "f53867b5947f954848d9451842d76a75954631fab035f825dc92c3ef388141a5"
+    },
+    {
+      "path": "firmware/tests/rgb_test_profile_test.c",
+      "sha256": "1120db5f3ce6da5f9088ad5a3c9f7e80cd0778a715c86567fadc2290a322882e"
+    },
+    {
+      "path": "firmware/tests/rgb_white_balance_test_profile_test.c",
+      "sha256": "e7bf490ecb2f09f5bcb26ab17cfc21502fc0a0cd6229090b76f2e88f41405030"
+    },
+    {
+      "path": "firmware/tests/spec_product_profile_test.c",
+      "sha256": "373e31a4e121c2f795d90eb34605be9b5efd7fb6485611a70db0aba580fd0f02"
+    },
+    {
+      "path": "firmware/tests/test_firmware_sources.py",
+      "sha256": "1b0148080ac1ab90d385608848cbc1458bd947d40b7470bc633aafca5d9cee05"
+    },
+    {
+      "path": "firmware/tests/touch_diag_test.c",
+      "sha256": "d260808bdde83486402705cc9b583dd45b888b46ce9f478677cfe8a0a2a66a38"
+    },
+    {
+      "path": "tools/adc_monitor/adc_monitor.py",
+      "sha256": "87fd01822444e2e6711ad08db8c6d711514ac4d0c476b21b8f0ebd40e388f5b6"
+    },
+    {
+      "path": "tools/adc_monitor/requirements.txt",
+      "sha256": "6f2b42a91c60d18f5647f38d80715162f030cc88b63e09bb7e5d0f84a0c3a9fa"
+    },
+    {
+      "path": "tools/build-sp01-firmware.ps1",
+      "sha256": "9c824d741bfb350db757092f466a8096e7b637ee7583108ccaf88e2bc2556753"
+    },
+    {
+      "path": "tools/verify-sp01-artifacts.ps1",
+      "sha256": "d4a69466a644e45eaa356897d208756b3080da55a14f0e8e36dc711b1d7470aa"
+    }
+  ]
+}

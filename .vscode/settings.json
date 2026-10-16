@@ -1,0 +1,13 @@
+{
+  "files.associations": {
+    "*.h": "c",
+    "*.c": "c"
+  },
+  "C_Cpp.default.cStandard": "c99",
+  "C_Cpp.default.includePath": [
+    "${workspaceFolder}/firmware",
+    "${workspaceFolder}/firmware/app",
+    "${workspaceFolder}/firmware/platform/py32f002b"
+  ],
+  "editor.rulers": [100]
+}

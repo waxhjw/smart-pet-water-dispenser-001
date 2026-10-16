@@ -1,0 +1,32 @@
+[
+  {
+    "path": "hardware/cad/2026-09-23/BOM_Board1_Schematic1_2026-09-23.xlsx",
+    "original_sha256": "848f8b52a36a74b5fa2fb1bd4edcdda42bd9fec3175c7c52c9f340844c5ab093",
+    "published_sha256": "9056d9e9879ebe59eb6ae9c33b997c6cde033ddedd65899d9f8f42c860279fae",
+    "personal_metadata_fields_cleared": 2
+  },
+  {
+    "path": "hardware/cad/2026-09-23/ProDoc_PCB1_2026-09-23.epro2",
+    "original_sha256": "89e0dd18817d094cd13faa8598ce380a6666785f5342b4a39a6243b75ca055f6",
+    "published_sha256": "d0340d1a1942e2e96f5c441dfc017299b15e640d03c4bd051d132271e893d419",
+    "personal_metadata_fields_cleared": 88
+  },
+  {
+    "path": "hardware/cad/2026-09-23/ProDoc_PCB2_2026-09-23.epro2",
+    "original_sha256": "42576343275a651843c6b1ad50b9b9ad4fd7fd3d1d9c2b70349d75de4f881d02",
+    "published_sha256": "3f7d0dc7a04eb58ed9210f7ebb121376706858da3fa197564af2ccfb23890eb4",
+    "personal_metadata_fields_cleared": 19
+  },
+  {
+    "path": "hardware/cad/2026-09-23/ProPrj_SP01_2026-09-23.epro2",
+    "original_sha256": "0abe7f8e31a167e36fe419babcfb45cc59df9491376d1e36abb85f8f5859fc62",
+    "published_sha256": "5ebd0a6e89332efb25f759cb5f6853dd812ee0287e2d8d9b697a804fe9e9c0fd",
+    "personal_metadata_fields_cleared": 192
+  },
+  {
+    "path": "hardware/cad/2026-09-23/SCH_Schematic1_2026-09-23.pdf",
+    "original_sha256": "9c2d7dbf6d9067d1e4e1529b6c4d40f979cf19c2b8466db7daf57e5c78a8caa2",
+    "published_sha256": "9c2d7dbf6d9067d1e4e1529b6c4d40f979cf19c2b8466db7daf57e5c78a8caa2",
+    "personal_metadata_fields_cleared": 0
+  }
+]
